@@ -1,8 +1,8 @@
-import './App.css';
 import React from 'react';
 import { makeStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './components/Header';
+import PlacesToVisit from './components/PlaceToVisit';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +20,7 @@ function App() {
     <div className={classes.root}>
       <CssBaseline />
       <Header />
+      <PlacesToVisit />
     </div>
   );
 }
