@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
+import Collapse from '@mui/material/Collapse';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,33 +29,35 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ImageCard({ place }) {
+export default function ImageCard({ place, checked }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardMedia
-        className={classes.media}
-        component='img'
-        image={place.imageUrl}
-      />
-      <CardContent>
-        <Typography
-          gutterBottom
-          variant='h5'
-          component='div'
-          className={classes.title}
-        >
-          {place.title}
-        </Typography>
-        <Typography
-          variant='body2'
-          color='text.secondary'
-          className={classes.desc}
-        >
-          {place.description}
-        </Typography>
-      </CardContent>
-    </Card>
+    <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}>
+      <Card className={classes.root}>
+        <CardMedia
+          className={classes.media}
+          component='img'
+          image={place.imageUrl}
+        />
+        <CardContent>
+          <Typography
+            gutterBottom
+            variant='h5'
+            component='div'
+            className={classes.title}
+          >
+            {place.title}
+          </Typography>
+          <Typography
+            variant='body2'
+            color='text.secondary'
+            className={classes.desc}
+          >
+            {place.description}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Collapse>
   );
 }

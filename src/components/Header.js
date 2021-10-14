@@ -6,6 +6,7 @@ import SortIcon from '@mui/icons-material/Sort';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Toolbar from '@mui/material/Toolbar';
 import Collapse from '@mui/material/Collapse';
+import { Link as Scroll } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,9 +75,11 @@ export default function Header() {
             Welcome to <br />
             My<span className={classes.colorText}>Island.</span>
           </h1>
-          <IconButton>
-            <ExpandMoreIcon className={classes.goDown} />
-          </IconButton>
+          <Scroll to='place-to-visit' smooth={true}>
+            <IconButton>
+              <ExpandMoreIcon className={classes.goDown} />
+            </IconButton>
+          </Scroll>
         </div>
       </Collapse>
     </div>
