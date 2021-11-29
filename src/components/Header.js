@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { makeStyles } from '@mui/styles';
-import AppBar from '@mui/material/AppBar';
-import IconButton from '@mui/material/IconButton';
-import SortIcon from '@mui/icons-material/Sort';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Toolbar from '@mui/material/Toolbar';
-import Collapse from '@mui/material/Collapse';
+import { makeStyles } from '@material-ui/core/styles';
+import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
+import SortIcon from '@material-ui/icons/Sort';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as Scroll } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
@@ -27,13 +24,6 @@ const useStyles = makeStyles((theme) => ({
   appbarTitle: {
     flexGrow: '1',
   },
-  title: {
-    color: '#fff',
-    fontSize: '4.5rem',
-  },
-  container: {
-    textAlign: 'center',
-  },
   icon: {
     color: '#fff',
     fontSize: '2rem',
@@ -41,12 +31,18 @@ const useStyles = makeStyles((theme) => ({
   colorText: {
     color: '#5AFF3D',
   },
+  container: {
+    textAlign: 'center',
+  },
+  title: {
+    color: '#fff',
+    fontSize: '4.5rem',
+  },
   goDown: {
     color: '#5AFF3D',
-    fontSize: 'large',
+    fontSize: '4rem',
   },
 }));
-
 export default function Header() {
   const classes = useStyles();
 
@@ -61,7 +57,7 @@ export default function Header() {
       <AppBar className={classes.appbar} elevation={0}>
         <Toolbar className={classes.appbarWrapper}>
           <h1 className={classes.appbarTitle}>
-            My<span className={classes.colorText}>Island</span>
+            My<span className={classes.colorText}>Island.</span>
           </h1>
           <IconButton>
             <SortIcon className={classes.icon} />
@@ -69,7 +65,11 @@ export default function Header() {
         </Toolbar>
       </AppBar>
 
-      <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}>
+      <Collapse
+        in={checked}
+        {...(checked ? { timeout: 1000 } : {})}
+        collapsedHeight={50}
+      >
         <div className={classes.container}>
           <h1 className={classes.title}>
             Welcome to <br />
