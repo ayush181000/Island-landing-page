@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Island-website-react/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/Island-website-react/static/js/main.d487eda1.chunk.js",
+    "main.js.map": "/Island-website-react/static/js/main.d487eda1.chunk.js.map",
+    "runtime-main.js": "/Island-website-react/static/js/runtime-main.b9031ffe.js",
+    "runtime-main.js.map": "/Island-website-react/static/js/runtime-main.b9031ffe.js.map",
+    "static/js/2.53c2528e.chunk.js": "/Island-website-react/static/js/2.53c2528e.chunk.js",
+    "static/js/2.53c2528e.chunk.js.map": "/Island-website-react/static/js/2.53c2528e.chunk.js.map",
+    "index.html": "/Island-website-react/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/Island-website-react/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.53c2528e.chunk.js.LICENSE.txt": "/Island-website-react/static/js/2.53c2528e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9031ffe.js",
+    "static/js/2.53c2528e.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.d487eda1.chunk.js"
+  ]
+}
